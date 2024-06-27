@@ -36,7 +36,7 @@ jobs:
       
 
     - name: Build the Docker image   
-      run: docker build . --file Dockerfile --tag nishashah29/javawebapp:latest
+      run: docker build . --file Dockerfile --tag nishashah29/javawebapplication:latest
       
     - name: Login to Docker Hub
       uses: docker/login-action@v1
@@ -45,4 +45,4 @@ jobs:
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
     - name: Docker push   
-      run: docker push nishashah29/javawebapp:latest   
+      run: docker push nishashah29/javawebapplication:latest   
